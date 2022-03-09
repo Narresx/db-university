@@ -17,6 +17,12 @@ FROM `students`
 WHERE `date_of_birth` 
 LIKE '1990-%';
 
+-- Metodo più semplice
+
+SELECT * 
+FROM `students` 
+WHERE YEAR(`date_of_birth`) = '1990';
+
 
 -- 2. Selezionare tutti i corsi che valgono più di 10 crediti (479)
 
@@ -44,7 +50,7 @@ WHERE `period` = 'I semestre' && `year` = '1';
 
 SELECT *
 FROM `exams`
-WHERE `date` = '2020/06/20'
+WHERE `date` = '2020-06-20'
 AND `hour` >= '14:00';
 
 
