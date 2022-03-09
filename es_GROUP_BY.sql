@@ -8,8 +8,7 @@
 
 -- 1. Contare quanti iscritti ci sono stati ogni anno
 
-SELECT COUNT(*) AS 'n_students', YEAR('enrolment_date') as 'year' 
-FROM `students`
-GROUP BY YEAR(`enrolment_date`)
-ORDER BY YEAR(`enrolment_date`) ASC;
+SELECT COUNT(`id`) AS 'n_students',YEAR(`enrolment_date`) AS 'year' FROM `students`  
+GROUP BY YEAR(`enrolment_date`);
+
 
